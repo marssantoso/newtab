@@ -1,0 +1,285 @@
+/*
+color-0 = #5d4157
+color-1 = #838689
+color-2 = #a8caba
+color-3 = #cad7b2
+color-4 = #ebe3aa
+color-a = #706370
+color-b = #95a8a1
+color-c = #b9d0b5
+color-d = #daddad
+*/
+
+body {}
+
+::-webkit-input-placeholder {
+  color: #838689;
+}
+
+::-moz-input-placeholder {
+  color: #838689;
+  font-family: "Droid Sans";
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Droid Sans", sans-serif;
+}
+
+#time-container {
+  height: 200px;
+  width: 100%;
+  background-color: #5d4157;
+  flex-direction: column;
+}
+
+#search-container {
+  height: 100px;
+  background-color: #706370;
+}
+
+#entry-container {
+  height: 450px;
+  width: 100%;
+  display: inline-flex;
+}
+
+#category.container {
+  width: 25%;
+  background-color: #838689;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px 30px 0 0;
+}
+
+#link.container {
+  width: 75%;
+  display: inline-flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+  background: #95a8a1;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+#result.container {
+  flex-direction: column;
+}
+
+#time {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+#time h1 {
+  font-size: 100px;
+  color: #a8caba;
+}
+
+#time span {
+  font-size: 25px;
+  color: #95a8a1;
+  position: relative;
+}
+
+#time .sep {
+  top: -25px;
+}
+
+#time .sep.blink {
+  color: #5d4157;
+}
+
+#time .ampm {
+  top: -55px;
+}
+
+#date h2{
+  line-height: 30px;
+  color: #95a8a1;
+  margin: 0;
+  display: flex;
+}
+
+#date span{
+  font-size: 14px;
+  padding-right: 10px;
+  position: relative;
+  top: -5px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  height: 50px;
+  margin: 5px;
+  border-radius: 2px;
+  border: 0;
+}
+
+.text.search {
+  width: 400px;
+  padding-left: 15px;
+  padding-right: 50px;
+  font-size: 20px;
+  background-color: #95a8a1;
+  color: #5d4157;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.text.search:focus, .text.search:hover {
+  box-shadow: 0 2px 5px #5d4157;
+  border: 0;
+}
+
+.btn {
+  display: block;
+  background-color: #838689;
+  color: #5d4157;
+  text-align: center;
+  margin: 5px;
+  padding: 0;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in;
+  transition: background-color .2s ease;
+  transition: color .1s ease-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #706370;
+  color: #95a8a1;
+  box-shadow: 0 2px 5px #5d4157;
+}
+
+.btn:active {
+  background-color: #5d4157;
+}
+
+.btn#search {
+  width: 50px;
+  line-height: 50px;
+  font-size: 36px;
+  border-radius: 2px;
+}
+
+.btn#clear {
+  width: 20px;
+  line-height: 20px;
+  font-size: 18px;
+  position: relative;
+  left: -100px;
+  border-radius: 50%;
+  background-color: #95a8a1;
+}
+
+.btn#clear:hover {
+  box-shadow: 0 1px 2px #5d4157;
+  background-color: #5d4157;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  color: #5d4157;
+  text-decoration: none;
+}
+
+#category li {
+  text-align: right;
+  padding: 10px 5px 10px 30px;
+}
+
+#category li a {
+  padding: 10px 10px 10px 20px;
+  border-right: 5px solid #838689;
+  border-bottom: 1px solid #706370;
+  transition: border 0.3s ease-in;
+}
+
+#category li a.active {
+  background: #706370;
+  border-right: 5px solid;
+  border-bottom: 0;
+  padding-right: 10px;
+  border-top-left-radius: 5px;
+}
+
+#category li a.disabled {
+  color: #706370;
+  pointer-events: none;
+  cursor: default;
+}
+
+#category li a.active.disabled {
+  color: #5d4157;
+}
+
+#category li a:hover:not(.disabled) {
+  border-right: 5px solid #5d4157;
+  padding-right: 10px;
+}
+
+#link ul {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 50px;
+}
+
+#link ul li {
+/*  margin: 20px;*/
+}
+
+#link a {
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 2px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: #95a8a1;
+  transition: background 0.2s;
+}
+
+#link a:hover {
+  background: #838689;
+}
+
+#link a span {
+  font-size: 10px;
+  text-align: center;
+}
+
+#searchOthers {
+  display: flex;
+  flex-direction: column;
+}
+
+#searchOthers a {
+  color: #5d4157;
+  text-decoration: none;
+  padding: 5px 30px;
+  display: inline;
+  width: auto;
+}
+
+#searchOthers a span {
+  font-size: 20px;
+}
+
+#searchOthers a .key {
+  text-decoration: underline;
+}
+
+#searchOthers a .site {
+  font-weight: bold;
+}
