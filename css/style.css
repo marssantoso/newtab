@@ -1,15 +1,3 @@
-/*
-color-0 = #5d4157
-color-1 = #838689
-color-2 = #a8caba
-color-3 = #cad7b2
-color-4 = #ebe3aa
-color-a = #706370
-color-b = #95a8a1
-color-c = #b9d0b5
-color-d = #daddad
-*/
-
 body {}
 
 ::-webkit-input-placeholder {
@@ -233,10 +221,6 @@ li a {
   flex-wrap: wrap;
   justify-content: center;
   padding: 0 50px;
-}
-
-#link ul li {
-/*  margin: 20px;*/
 }
 
 #link a {
