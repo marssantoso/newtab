@@ -186,6 +186,31 @@
       ]
     },
     {
+      "category":"mail",
+      "entry":[
+        {
+          "name":"gmail",
+          "url":"https://mail.google.com/"
+        },
+        {
+          "name":"outlook",
+          "url":"https://outlook.com/"
+        },
+        {
+          "name":"yahoo! mail",
+          "url":"https://mail.yahoo.com/"
+        },
+        {
+          "name":"fake mail",
+          "url":"http://www.fakemailgenerator.com/"
+        },
+        {
+          "name":"ugm mail",
+          "url":"http://ugmail.ugm.ac.id/"
+        }
+      ]
+    },
+    {
       "category":"academics",
       "entry":[
         {

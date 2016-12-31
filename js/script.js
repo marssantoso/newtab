@@ -73,6 +73,10 @@ bookmarkApp.config(function ($routeProvider) {
       controller: 'bookmarkController',
       templateUrl: 'parts/search.html'
     })
+    .when('/mail', {
+      controller: 'bookmarkController',
+      templateUrl: 'parts/mail.html'
+    })
     .otherwise({
       redirectTo: '/all'
     });
