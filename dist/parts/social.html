@@ -1,0 +1,3 @@
+<ul>
+  <li data-ng-repeat="entry in bookmarks[1].entry | filter:search | limitTo:15 | orderBy:'name'"><a href="{{ entry.url }}">{{ entry.name }}<span>{{ entry.url | limitTo:20 }}<span data-ng-if="entry.url.length > 20">...</span></span></a></li>
+</ul>

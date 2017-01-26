@@ -1,0 +1,312 @@
+$font-face: "Open Sans";
+
+$blue-1:   #028598;
+$blue-2:   #03b7d0;
+$blue-3:   #26c4da;
+$blue-4:   #4bcfe1;
+$blue-5:   #78dcea;
+$teal-1:   #00554c;
+$teal-2:   #006f63;
+$teal-3:   #00897a;
+$teal-4:   #38a89c;
+$orange-1: #f87700;
+$orange-2: #ff8f29;
+$orange-3: #ffa552;
+$grey-1:   #d0d6d7;
+$grey-2:   #575d5e;
+$black:    #151818;
+$white:    #fafafa;
+
+@mixin large-text {
+  font: {
+    family: $font-face;
+    size: 40px;
+    weight: 200;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin full-width {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+
+  a {
+    color: $teal-1;
+    text-decoration: none;
+  }
+}
+
+.container {
+  @include flex-center;
+  font-family: $font-face;
+}
+
+#container {
+  &-time {
+    @include full-width;
+    @include flex-column;
+    height: 25vh;
+    background-color: $black;
+  }
+
+  &-search {
+    height: 15vh;
+    background-color: $blue-1;
+  }
+
+  &-entry {
+    @include full-width;
+    min-height: 60vh;
+    display: inline-flex;
+  }  
+}
+
+#category {
+  width: 20%;
+  background-color: $blue-4;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px 30px 0 0;
+
+  li {
+    text-align: right;
+    padding: 5px 5px 5px 30px;
+
+    a {
+      padding: 5px 10px;
+      border-bottom: 1px solid $teal-4;
+      border-right: 5px solid $teal-3;
+      transition: padding-right .1s ease;
+
+      &.active {
+        background-color: $blue-2;
+        border-right: 5px solid $teal-1;
+        border-bottom: 0;
+        padding-right: 10px;
+        border-top-left-radius: 5px;
+
+        &.disabled {
+          color: $teal-1;
+        }
+      }
+
+      &.disabled {
+        color: $teal-4;
+        pointer-events: none;
+        cursor: default;
+      }
+
+      &:hover:not(.disabled) {
+        border-right: 5px solid $orange-2;
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+#link {
+  width: 80%;
+  align-items: flex-start;
+  background-color: $blue-5;
+  overflow: hidden;
+  padding-top: 20px;
+
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 50px;
+  }
+
+  a {
+    @include flex-column;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 2px;
+    text-align: center;
+    background-color: $blue-3;
+    border-bottom: 5px solid $blue-3;
+    transition: background-color 0.2s;
+    transition: color 0.2s;
+
+    &:hover {
+      background-color: $blue-1;
+    border-bottom: 5px solid $orange-3;
+      color: $blue-5;
+    }
+
+    span {
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+}
+
+#result {
+  @include flex-column;
+}
+
+#time {
+  @include flex-center;
+  height: 100px;
+
+  h1 {
+    font-size: 100px;
+    color: $blue-2;
+  }
+
+  span {
+    font-size: 25px;
+    color: $orange-2;
+    position: relative;
+  }
+
+  .sep {
+    top: -25px;
+  }
+
+  .sep.blink {
+    color: $blue-2;
+  }
+
+  .ampm {
+    top: -55px;
+  }
+}
+
+#date {
+  h2 {
+    line-height: 30px;
+    color: $teal-4;
+    margin: 0;
+    display: flex;
+  }
+
+  span {
+    font-size: 14px;
+    color: $orange-2;
+    padding-right: 10px;
+    position: relative;
+    top: -5px;
+  }
+}
+
+#searchOthers {
+  @include flex-column;
+
+  a {
+    color: $teal-1;
+    text-decoration: none;
+    padding: 5px 30px;
+    display: inline;
+    max-width: 400px;
+
+    span {
+      font-size: 20px;
+    }
+
+    .key {
+      padding-bottom: 2px;
+      border-bottom: 3px solid $orange-1;
+    }
+
+    .site {
+      font-weight: bold;
+    }
+
+    .wink {
+      font-size: 14px;
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+form {
+  @include flex-center;
+}
+
+.search {
+  height: 50px;
+  margin: 5px;
+  border-radius: 2px;
+  border: 0;
+
+  &.text {
+    width: 400px;
+    padding-left: 20px;
+    padding-right: 40px;
+    font-size: 20px;
+    background-color: $blue-3;
+    color: $black;
+    transition: box-shadow 0.2s ease-in;
+
+    &:focus {
+      box-shadow: 0 2px 5px $black;
+      border: 0;
+    }
+
+    &:hover {
+      @extend :focus;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  background-color: $blue-5;
+  color: $teal-1;
+  text-align: center;
+  margin: 5px;
+  padding: 0;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in;
+  transition: background-color .2s ease;
+  transition: color .1s ease out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $blue-3;
+    color: $black;
+    box-shadow: 0 2px 5px $black;
+  }
+
+  &:active {
+    background-color: $black;
+    color: $orange-3;
+  }
+
+  &#search {
+    width: 50px;
+    line-height: 50px;
+    font-size: 36px;
+    border-radius: 2px;
+  }
+
+  &#clear {
+    width: 20px;
+    line-height: 20px;
+    font-size: 18px;
+    position: relative;
+    left: -100px;
+    border-radius: 50%;
+
+    &:hover {
+      box-shadow: 0 1px 2px $black;
+    }
+  }
+}

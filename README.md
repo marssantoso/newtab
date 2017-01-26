@@ -16,3 +16,11 @@ If you added new cateogries by editting bookmark.json, link of the new categorie
 ## Notes
 
 This was only created in a couple of hours and I haven't re checked the codes, so it might look messy on the inside, but so far everything seems to work. Will look into the codes again before adding more features.
+
+## Changelog
+
+### 20170126
+
+* Now built using gulp, the compiled build is in `dist` folder. To compile it yourself, use `gulp build`. Check `package.json` for dependencies.
+* Removed my owm personal bookmarks and added new common ones.
+* No new features introduced yet.

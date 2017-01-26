@@ -1,0 +1,10 @@
+<div id="result" class="container">
+  <ul>
+    <li data-ng-repeat="entry in all | filter:search | limitTo:10 | orderBy:'name'"><a href="{{ entry.url }}">{{ entry.name }}<span>{{ entry.url | limitTo:20 }}<span data-ng-if="entry.url.length > 20">...</span></span></a></li>
+  </ul>
+  <div id="searchOthers" data-ng-if="search != ''">
+    <a class="goSearch" href="https://www.google.com/search?q={{ search }}">Search <span class="key">{{ search | limitTo:18}}<span data-ng-if="search.length > 18">...</span></span> on <span class="site" id="google">Google</span></a>
+    <a class="goSearch" href="https://duckduckgo.com/?q={{ search }}">Search <span class="key">{{ search | limitTo:12}}<span data-ng-if="search.length > 12">...</span></span> on <span class="site" id="ddgo">DuckDuckGo</span></a>
+    <a class="goSearch" href="https://www.bing.com/search?q={{ search }}">Search <span class="key">{{ search | limitTo:20}}<span data-ng-if="search.length > 20">...</span></span> on <span class="site" id="bing">Bing </span><span data-ng-if="search == 'porn'" class="wink"> ( ͡° ͜ʖ ͡°)</span></a>
+  </div>
+</div>
