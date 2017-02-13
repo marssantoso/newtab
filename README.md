@@ -1,6 +1,16 @@
 # newtab
 A nice new tab page replacement
 
+## Screenshots
+
+**Default Page**
+
+![Default](https://raw.githubusercontent.com/ma-santoso/newtab/master/screenshots/default.png)
+
+**Search Page**
+
+![Search](https://raw.githubusercontent.com/ma-santoso/newtab/master/screenshots/search.png)
+
 ## How to use
 
 Replace your startpage/new tab page of your browser with this either manually or using an extension.
